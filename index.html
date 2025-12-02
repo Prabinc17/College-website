@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form to Apply for BCA</title>
+    
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+
+    <style>
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: white;
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-menu li {
+        margin-left: 1.5rem;
+      }
+
+      .nav-menu a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        padding: 0.5rem 0;
+        position: relative;
+      }
+
+      .nav-menu a:hover {
+        color: #ffd700;
+      }
+
+      .nav-menu a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffd700;
+        transition: width 0.3s ease;
+      }
+
+      .nav-menu a:hover::after {
+        width: 100%;
+      }
+
+      
+      main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 20px;
+      }
+
+      .form-section {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+      }
+
+      .form-section h2 {
+        margin-bottom: 1.5rem;
+        color: #333;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      input[type="radio"] {
+        margin-right: 0.5rem;
+      }
+
+      button {
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+
+     
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem 0;
+        background: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      th,
+      td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: white;
+      }
+
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+
+      
+      ul,
+      ol {
+        margin: 1rem 0;
+        padding-left: 2rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+      }
+
+     
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+        }
+
+        .nav-menu {
+          margin-top: 1rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .nav-menu li {
+          margin: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+   
+    <header>
+      <div class="header-container">
+        <a href="#" class="logo"> SMC BCA </a>
+        <ul class="nav-menu">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">MAIN FORM</a></li>
+          <li><a href="#">DOCUMENTATION</a></li>
+          <li><a href="#">BILLING</a></li>
+          <li><a href="#">ENTRANCE EXAM</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Form Section -->
+    <main>
+      <section class="form-section">
+        <h2>Form to Apply for BCA in SMC</h2>
+        <form method="post">
+          <!-- First Name -->
+          <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="Enter your First Name"
+              required
+            />
+          </div>
+
+          <!-- Last Name -->
+          <div class="form-group">
+            <label for="lastname">Last Name:</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              placeholder="Enter your Last Name"
+              required
+            />
+          </div>
+
+          <!-- Username -->
+          <div class="form-group">
+            <label for="username">Email:</label>
+            <input
+              type="text"
+              id="u"
+              name="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+
+          <!-- Gender -->
+          <div class="form-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female">Female</label>
+          </div>
+
+          <!-- Location -->
+          <div class="form-group">
+            <label for="location">Choose your current location:</label>
+            <select name="location" id="location">
+              <option value="us">kathmandu</option>
+              <option value="in">pokhara</option>
+              <option value="np">gorkha</option>
+              <option value="np">dharan</option>
+              <option value="np">biratnagar</option>
+              <option value="np">butwal</option>
+            </select>
+          </div>
+
+          <!-- Country -->
+          <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+              <option value="">Select your country</option>
+              <option value="Nepal">Nepal</option>
+              <option value="India">India</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <!-- Headings Demo -->
+      <section>
+        <h1>This is H1</h1>
+        <h2>This is H2</h2>
+        <h3>This is H3</h3>
+        <h4>This is H4</h4>
+        <h5>This is H5</h5>
+        <h6>This is H6</h6>
+      </section>
+
+      <!-- Table Section -->
+      <section>
+        <h2>Employee Details</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Favorite Language</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Prabin</td>
+              <td>Programmer</td>
+              <td>JavaScript</td>
+            </tr>
+            <tr>
+              <td>Larry</td>
+              <td>Developer</td>
+              <td>Python</td>
+            </tr>
+            <tr>
+              <td>Marry</td>
+              <td>Tester</td>
+              <td>Java</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+     
+      <section>
+        <h2>Skills (Unordered List)</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ul>
+
+        <h2>Skills (Ordered List)</h2>
+        <ol type="i">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ol>
+      </section>
+    </main>
+
+       <footer>
+      <p>&copy; 2025 WEB-Development. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
